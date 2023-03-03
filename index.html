@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <div class="main">
+    <div class="main__leftSide">
+      <div class="leftSide__cardFront">
+        <div class="cardFront__topContainer">
+          <div class="circleContainer__whiteCircle"></div>
+          <div class="circleContainer__openCircle"></div>
+        </div>
+        <h2>0000 0000 0000 0000</h2>
+        <div class="cardFront__bottomContainer">
+          <p class="bottomContainer__name">Jane Appleseed</p>
+          <p class="bottomContainer__expiryDate">00/00</p>
+        </div>
+      </div>
+      <div class="leftSide__cardBack">
+        <p>000</p>
+      </div>
+    </div>
+    <div class="main__rightSide">
+      <form class="rightSide__mainForm">
+        <label class="formHeadings" for="cardholderName">Cardholder Name</label>
+        <input type="text" id="cardholderName" name="cardholderName" placeholder="e.g. Jane Appleseed">
+        <p class="mainForm__inputFeedback" id="cardHolderNameFB">Input Feedback</p>
+        <label class="formHeadings" for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234567891230000">
+        <p class="mainForm__inputFeedback" id="cardNumberFB">Input Feedback</p>
+        <div class="expiryDateCVCContainer">
+          <div class="expirydateContainer">
+            <label class="formHeadings" for="expiryDate">Exp. Date (MM/YY)</label>
+            <div class="inputContainer">
+              <input type="text" id="expiryDateMonth" name="expiryDateMonth" placeholder="MM">
+              <input type="text" id="expiryDateYear" name="expiryDateYear" placeholder="YY">
+            </div>
+            <div class="inputFeedbackContainer">
+              <p class="mainForm__inputFeedback" id="expiryDateMonthFB">Input Feedback</p>
+              <p class="mainForm__inputFeedback" id="expiryDateYearFB">Input Feedback</p>
+            </div>
+          </div>
+          <div class="cvcContainer">
+            <label class="formHeadings" for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+            <p class="mainForm__inputFeedback" id="cvcFB">Input Feedback</p>
+          </div>
+        </div>
+        <button type="submit" value="Confirm" id="confirm">Confirm</button>
+      </form>
+      <div class="rightSide__completedForm">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button type="submit" value="Continue" id="continue"/>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

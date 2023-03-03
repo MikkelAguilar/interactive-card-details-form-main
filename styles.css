@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Space+Grotesk&display=swap');
+
+/*
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+*/
+:root {
+    --font-family: 'Space Grotesk', sans-serif;
+    --linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --color-white: hsl(0, 0%, 100%);
+    --color-red: hsl(0, 100%, 66%);
+    --color-light-grayish-violet: hsl(270, 3%, 87%);
+    --color-dark-grayish-violet: hsl(279, 6%, 55%);
+    --color-very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+.main {
+    display: flex;
+}
+
+.main__leftSide {
+    width: 33.33%;
+    height: 100vh;
+    background: url('images/bg-main-desktop.png');
+}
+
+.leftSide__cardFront {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background: url("images/bg-card-front.png");
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 247px;
+    color: white;
+    padding: 10px 35px;
+}
+
+.cardFront__topContainer {
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.circleContainer__whiteCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+.circleContainer__openCircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px var(--color-white) solid;
+    border-color: aliceblue;
+    margin-left: 18px;
+}
+
+.leftSide__cardFront h2 {
+    letter-spacing: 5px;
+    margin-top: 35px;
+}
+
+.cardFront__bottomContainer {
+    display: flex;
+    margin-top: 28px;
+}
+
+.bottomContainer__name {
+    text-transform: uppercase;
+}
+.bottomContainer__expiryDate {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.leftSide__cardBack {
+    position: absolute;
+    top: 65%;
+    left: 37.5%;
+    transform: translate(-50%, -50%);
+    background: url("images/bg-card-back.png");
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 247px;
+    color: var(--color-white);
+}
+
+.leftSide__cardBack p {
+    display: inline-block;
+    align-items: center;
+    margin-top: 24.5%;
+    margin-left: 78%;
+    letter-spacing: 2px;
+}
+
+.main__rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66.67%;
+}
+
+.rightSide__mainForm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+#cardholderName {
+    width: 400px;
+}
+
+#cardNumber {
+    width: 400px;
+}
+
+#expiryDateMonth {
+    width: 80px;
+}
+
+#expiryDateYear {
+    margin-left: 10px;
+    width: 80px;
+}
+
+#cvc {
+    display: block;
+    width: 202px;
+}
+
+#confirm {
+    background: var(--color-very-dark-violet);
+    color: var(--color-white);
+    height: 50px;
+}
+
+.formHeadings {
+    display: block;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.rightSide__mainForm input, #confirm {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 0.1px var(--color-light-grayish-violet) solid;
+    border-radius: 5px;
+    font-size: 18px;
+    display: block;
+}
+
+.mainForm__inputFeedback {
+    display: none;
+    font-size: 12px;
+    color: red;
+}
+
+.expiryDateCVCContainer {
+    display: flex;
+}
+
+.inputContainer {
+    display: flex;
+}
+
+.expirydateContainer {
+    width: 50%;
+}
+
+.inputFeedbackContainer {
+    display: flex;
+}
+
+#expiryDateMonthFB {
+    width: 80px;
+}
+
+#expiryDateYearFB {
+    width: 80px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.cvcContainer {
+    width: 50%;
+}
+
+.rightSide__completedForm {
+    display: none;
+}
